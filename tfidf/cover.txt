@@ -1,0 +1,8 @@
+team member: Yunge Hao 214361760
+
+1. You might need to do the same trick due to the "curse of DOS" since I uploaded everthing from my local machince to the eecs machine after I copied them from Hadoop.
+2. I have 3 pairs of Mappers and Reducers and accordingly 3 stages. Mapper1 and Reducer1 are for calculating the number of documents each word appears in. Mapper2 and Reducer2 are for the number of occrances of each word within a document. Mapper3 and Reducer3 are just a fancy merger of the previous two stages.
+3. I did not include
+word = re.sub('[^a-zA-Z0-9]+', '', token.lower())
+to get rid off all but letter and digits, for this line of code causes the program to crush, for some mysterious reason. (Changing token.lower() to word.lower() did not do any help, as well as my many other ways of altering the statement.)
+4. The output of the first 100 lines is exactly the same as what's provided, except for the precison. My tfidf decimal value is longer. It always crushed when I tried to set the decimal precisoin. Sorry about that, hope that's not a big issue for checking.
